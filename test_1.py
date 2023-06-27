@@ -50,12 +50,9 @@ def test_login(browser):
 def test_sort(browser):
 
     # Сортировка стрелочка
-    try:
-        browser \
-            .find_element(By.CSS_SELECTOR, ".select_container::after") \
-            .click()
-    except Exception as e:
-        print("Не открывается выпадающий список", e)
+    browser \
+        .find_element(By.CSS_SELECTOR, ".select_container") \
+        .click()
     sleep(1)
 
     # Сортировка
